@@ -10,6 +10,7 @@
     color: rgb(82, 82, 235);
   }
   p {
+    margin-top: 20px;
     line-height: 1.6;
   }
   button {
@@ -23,6 +24,24 @@
     transition: ease 0.3s;
     &:hover {
       background-color: #0056b3;
+    }
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: ease 0.3s;
+    :hover {
+      background: #0056b3;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }
