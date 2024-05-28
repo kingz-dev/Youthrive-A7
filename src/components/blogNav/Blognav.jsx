@@ -7,7 +7,7 @@ const Blognav = () => {
     <div id='Nav'>
         <ul>
             <li><Link to='/' >Home</Link></li>
-            <li><Link to='/blog' >Blog</Link></li>
+            <li><Link to='/blogs' >Blogs</Link></li>
             {/* <li><Link to='/#' >Create Blog</Link></li>
             <li><Link to='/#' >Sign in</Link></li>
             <li><Link to='/#' >Sign up</Link></li>

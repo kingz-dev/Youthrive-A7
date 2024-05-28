@@ -6,12 +6,12 @@ import Nav from "./components/nav/Nav";
 import Error from "./components/error/Error";
 import About from "./components/about/About";
 import Portfolio from "./components/portfolio/Portfolio";
-import Blog from "./components/blog/Blog";
+import Blogs from "./components/blogs/Blogs";
 import BlogDetails from "./components/blogDetails/BlogDetails";
 
 function App() {
   let Path = useLocation();
-  let noNav = ['/blog', '/blogs/:id'];
+  let noNav = ['/blogs', '/blogDetails'];
   
 
   return (
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="*" element={<Error />} />

@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
+import './blogDetails.scss'
 
 const BlogDetails = () => {
     const {id} = useParams();
@@ -25,11 +26,13 @@ const BlogDetails = () => {
 
   return (
     <div>
+      <div id='blogDetails'>
         <h2>{blog.title}</h2>
         <p>{blog.body}</p>
         <div className='btn'>
-            <button onClick={() => redir('/blog')}>Back to Blogs</button>
+            <button onClick={() => redir('/blogs')}>Back to Blogs</button>
         </div>
+      </div>
     </div>
   )
 }

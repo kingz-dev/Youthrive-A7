@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Blognav from '../blogNav/Blognav'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './blogs.scss'
 
 const Blog = () => {
 const [blogs, setBlogs] = useState([]);
@@ -21,6 +22,7 @@ useEffect(() => {
   return (
     <div>
       <Blognav />
+      <div id='Blogs'>
       <h1>All blogs</h1>
       <ul>
         {blogs.map(blog => (
@@ -29,6 +31,7 @@ useEffect(() => {
         </li>
         ))}
       </ul>
+      </div>
     </div>
   )
 }
