@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
@@ -10,15 +10,17 @@ import Blog from "./components/blog/Blog";
 import BlogDetails from "./components/blogDetails/BlogDetails";
 
 function App() {
+  let Path = useLocation();
+  let noNav = ['/blog', '/blogs/:id'];
   
 
   return (
     <>
       <div>
-        <Nav />
+      { !noNav.includes(Path.pathname) && <Nav />}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
