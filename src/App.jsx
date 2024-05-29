@@ -18,12 +18,13 @@ function App() {
     <>
       <div>
       { !noNav.includes(Path.pathname) && <Nav />}
+      {/* <Nav /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About developer='Onyinanya Kingsley' />} />
+          <Route path="/portfolio" element={<Portfolio developer='Onyinanya Kingsley' />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
